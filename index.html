@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regency Handicraft | Home Harmony</title>
+    <meta name="description"
+        content="Regency Handicraft - Crafting sustainable, durable, and aesthetically appealing handmade pieces.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        walnut: '#4A3728',
+                        sand: '#E8E1D7',
+                        gold: '#B89947',
+                        light: '#FDFBF7',
+                        dark: '#1A1A1A',
+                        coffeebrown: '#5D4037'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif', 'font-bold'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero': "url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans antialiased text-gray-900 selection:bg-gold selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 pointer-events-auto" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-6 grid grid-cols-3 items-center transition-all duration-300"
+            id="nav-container">
+
+            <!-- Left Links -->
+            <nav
+                class="hidden md:flex justify-start items-center text-sm font-medium tracking-[0.25em] uppercase text-sand relative z-10">
+                <!-- Collections with Mega Menu -->
+                <div class="group py-4">
+                    <a href="#collection-grid" class="hover:text-gold transition-colors flex items-center">
+                        Collections
+                    </a>
+
+                    <!-- Mega Menu Dropdown Panel -->
+                    <div
+                        class="absolute top-full left-0 w-max max-w-7xl px-4 invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50">
+                        <div
+                            class="bg-white shadow-xl border-t-[3px] border-[#B89947] rounded-b-md p-8 pt-10 pb-12 w-[800px]">
+                            <div class="grid grid-cols-3 gap-10">
+                                <!-- Column 1: Kodo -->
+                                <div class="group/item cursor-pointer collection-card flex flex-col"
+                                    data-collection-id="kodo">
+                                    <div class="relative w-full aspect-[4/3] rounded-sm overflow-hidden mb-4 bg-sand">
+                                        <img src="images/Kodo.png" alt="The Kodo Collection"
+                                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover/item:opacity-100 group-hover/item:scale-105 transition-all duration-500">
+                                        <div
+                                            class="absolute inset-0 bg-dark/10 group-hover/item:bg-transparent transition-colors">
+                                        </div>
+                                    </div>
+                                    <h4
+                                        class="font-serif text-lg font-bold text-coffeebrown mb-1 normal-case tracking-normal">
+                                        The Kodo Collection</h4>
+                                    <p class="text-[10px] text-walnut uppercase tracking-widest mb-3">Japandi Series</p>
+                                    <span
+                                        class="text-[10px] text-gold font-bold tracking-[0.25em] uppercase flex items-center gap-1 mt-auto group-hover/item:text-walnut transition-colors">
+                                        View Details
+                                    </span>
+                                </div>
+
+                                <!-- Column 2: Katha -->
+                                <div class="group/item cursor-pointer collection-card flex flex-col"
+                                    data-collection-id="katha">
+                                    <div class="relative w-full aspect-[4/3] rounded-sm overflow-hidden mb-4 bg-sand">
+                                        <img src="images/katha.png" alt="The Katha Series"
+                                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover/item:opacity-100 group-hover/item:scale-105 transition-all duration-500">
+                                        <div
+                                            class="absolute inset-0 bg-dark/10 group-hover/item:bg-transparent transition-colors">
+                                        </div>
+                                    </div>
+                                    <h4
+                                        class="font-serif text-lg font-bold text-coffeebrown mb-1 normal-case tracking-normal">
+                                        The Katha Series</h4>
+                                    <p class="text-[10px] text-walnut uppercase tracking-widest mb-3">Modern Artisan</p>
+                                    <span
+                                        class="text-[10px] text-gold font-bold tracking-[0.25em] uppercase flex items-center gap-1 mt-auto group-hover/item:text-walnut transition-colors">
+                                        View Details
+                                    </span>
+                                </div>
+
+                                <!-- Column 3: Aura-Struct -->
+                                <div class="group/item cursor-pointer collection-card flex flex-col"
+                                    data-collection-id="aura">
+                                    <div class="relative w-full aspect-[4/3] rounded-sm overflow-hidden mb-4 bg-sand">
+                                        <img src="images/aura.png" alt="Aura-Struct"
+                                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover/item:opacity-100 group-hover/item:scale-105 transition-all duration-500">
+                                        <div
+                                            class="absolute inset-0 bg-dark/10 group-hover/item:bg-transparent transition-colors">
+                                        </div>
+                                    </div>
+                                    <h4
+                                        class="font-serif text-lg font-bold text-coffeebrown mb-1 normal-case tracking-normal">
+                                        Aura-Struct</h4>
+                                    <p class="text-[10px] text-walnut uppercase tracking-widest mb-3">Soft Industrial
+                                    </p>
+                                    <span
+                                        class="text-[10px] text-gold font-bold tracking-[0.25em] uppercase flex items-center gap-1 mt-auto group-hover/item:text-walnut transition-colors">
+                                        View Details
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Logo (Center) -->
+            <div class="flex justify-center z-50 col-span-2 md:col-span-1 w-full">
+                <a href="#"
+                    class="nav-tagline text-lg tracking-[0.3em] uppercase font-medium text-sand transition-colors text-center w-full">
+                    Premium Decor & Beyond
+                </a>
+            </div>
+
+            <!-- Right Links -->
+            <nav
+                class="hidden md:flex justify-end items-center text-sm font-medium tracking-[0.25em] uppercase text-sand relative z-10">
+                <a href="#footer" class="hover:text-gold transition-colors py-4">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-walnut focus:outline-none z-50" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-light flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+            <nav class="flex flex-col space-y-8 text-center text-xl font-serif text-walnut">
+
+                <div class="space-y-4">
+                    <span class="text-gold text-sm tracking-widest uppercase font-sans font-bold">Collections</span>
+                    <div class="flex flex-col space-y-3 text-lg">
+                        <a href="#collection-grid"
+                            class="mobile-link collection-card text-coffeebrown hover:text-gold transition-colors"
+                            data-collection-id="kodo">The Kodo Collection</a>
+                        <a href="#"
+                            class="mobile-link collection-card text-coffeebrown hover:text-gold transition-colors"
+                            data-collection-id="katha">The Katha Series</a>
+                        <a href="#"
+                            class="mobile-link collection-card text-coffeebrown hover:text-gold transition-colors"
+                            data-collection-id="aura">Aura-Struct</a>
+                    </div>
+                </div>
+
+                <a href="#footer" class="mobile-link hover:text-gold transition-colors">Global Export Inquiries</a>
+                <a href="#" class="mobile-link hover:text-gold transition-colors">Sustainability</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-sand">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 bg-hero bg-cover bg-center bg-no-repeat w-full h-full"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-light"></div>
+
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20 flex flex-col items-center">
+            <h1
+                class="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-8 reveal reveal-delay-1 drop-shadow-md text-center transition-all duration-500 hover:drop-shadow-[0_0_25px_rgba(184,153,71,0.8)] cursor-default">
+                Regency <br /><span class="italic font-light">Handicraft</span>
+            </h1>
+            <p
+                class="text-white text-lg font-medium tracking-wide max-w-2xl mx-auto mb-10 reveal reveal-delay-2 drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)] text-center">
+                Bringing <span class="font-semibold italic">Home Harmony</span> to your space through bespoke Indian
+                artisanship and global aesthetics.
+            </p>
+            <div class="reveal reveal-delay-3 text-center">
+                <a href="#collection-grid"
+                    class="inline-block bg-coffeebrown border border-coffeebrown text-light px-8 py-4 text-sm tracking-widest uppercase hover:bg-walnut transition-all duration-500 shadow-md hover:shadow-lg">
+                    Explore Collections
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Furniture Gallery (Furnishing Side) -> Signature Collections -->
+    <section id="collection-grid" class="py-24 md:py-32 bg-sand">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20 reveal">
+                <span class="text-walnut/60 text-xs tracking-[0.2em] uppercase font-semibold mb-3 block">Kodo • Katha •
+                    Aura-Struct</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-walnut">Signature Collections</h2>
+                <p class="max-w-2xl mx-auto mt-6 font-light text-dark/80 text-lg">
+                    Embracing Japandi Minimalism, Soft Geometry, and Soft Industrial modularity. Click any collection to
+                    explore material specifications.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-12">
+                <!-- Grid 1: The Lounge Studio (Kodo Collection) -->
+                <div class="group cursor-pointer reveal collection-card" data-collection-id="kodo">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-light rounded-sm">
+                        <!-- Swappable Image Placeholder -->
+                        <img id="kodo-lounge-img" src="images/Kodo.png" alt="Lounge Chairs & Accents"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-sand/90 via-sand/20 to-transparent flex flex-col justify-end p-8 pointer-events-none">
+                            <h3 class="text-3xl font-serif text-coffeebrown font-bold drop-shadow-md mb-2">Lounge Chairs
+                                & Accents</h3>
+                            <p class="text-walnut font-medium drop-shadow-sm text-sm">The Lounge Studio (Kodo)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid 2: Organic Living (Katha Collection) -->
+                <div class="group cursor-pointer reveal reveal-delay-1 collection-card" data-collection-id="katha">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-light rounded-sm">
+                        <!-- Swappable Image Placeholder -->
+                        <img id="katha-living-img" src="images/katha.png" alt="Soft Geometry Furniture"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-sand/90 via-sand/20 to-transparent flex flex-col justify-end p-8 pointer-events-none">
+                            <h3 class="text-3xl font-serif text-coffeebrown font-bold drop-shadow-md mb-2">Soft Geometry
+                                Furniture</h3>
+                            <p class="text-walnut font-medium drop-shadow-sm text-sm">Organic Living (Katha)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid 3: The Aura-Struct Collection (Industrial Series) -->
+                <div class="group cursor-pointer reveal collection-card" data-collection-id="aura">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-light rounded-sm">
+                        <!-- Swappable Image Placeholder -->
+                        <img id="aura-struct-img" src="images/aura.png" alt="Soft Industrial Modularity"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-sand/90 via-sand/20 to-transparent flex flex-col justify-end p-8 pointer-events-none">
+                            <h3 class="text-3xl font-serif text-coffeebrown font-bold drop-shadow-md mb-2">Industrial
+                                Workspace</h3>
+                            <p class="text-walnut font-medium drop-shadow-sm text-sm">The Aura-Struct Collection</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership & Inquiry section -->
+    <section id="partnership-inquiry" class="py-24 bg-light border-t border-walnut/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 reveal">
+                <span class="text-walnut/60 text-xs tracking-[0.2em] uppercase font-semibold mb-3 block">Collaborate
+                    With Us</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-walnut">Partnership & Inquiry</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
+                <!-- Left Column: FAQ for Dealers -->
+                <div class="reveal reveal-delay-1">
+                    <h3 class="text-2xl font-serif text-walnut mb-8 border-b border-walnut/10 pb-4">Dealer FAQs</h3>
+
+                    <div class="space-y-6">
+                        <!-- FAQ 1 -->
+                        <div class="group border-b border-walnut/10 pb-6">
+                            <h4 class="text-gold font-bold tracking-wide mb-2 text-lg">Do you offer custom
+                                manufacturing?</h4>
+                            <p class="text-coffeebrown/80 font-medium leading-relaxed">Yes, based on Jodhpur/Moradabad
+                                craftsmanship.</p>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="group border-b border-walnut/10 pb-6">
+                            <h4 class="text-gold font-bold tracking-wide mb-2 text-lg">Do you support worldwide
+                                shipping?</h4>
+                            <p class="text-coffeebrown/80 font-medium leading-relaxed">Yes, specialized in global
+                                container logistics.</p>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="group border-b border-walnut/10 pb-6">
+                            <h4 class="text-gold font-bold tracking-wide mb-2 text-lg">Can we request a physical
+                                catalog?</h4>
+                            <p class="text-coffeebrown/80 font-medium leading-relaxed">Yes, digital and physical copies
+                                available.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Lead Form -->
+                <div class="reveal reveal-delay-2">
+                    <div class="p-10 border border-coffeebrown bg-white shadow-xl">
+                        <h3 class="text-2xl font-serif text-walnut mb-8 text-center">Business Inquiry</h3>
+
+                        <form id="business-inquiry-form" class="space-y-6"
+                            action="https://docs.google.com/forms/d/e/1FAIpQLSePETwShyJp-Exaq3xA00FBFGjiZeGMAgHuSloCqZJiKmqHtA/formResponse"
+                            method="POST" target="hidden_iframe">
+                            <div>
+                                <label for="name"
+                                    class="block text-xs uppercase tracking-widest text-walnut font-bold mb-2">Name</label>
+                                <input type="text" id="name" name="entry.2092238618"
+                                    class="w-full bg-light border border-coffeebrown/30 focus:border-coffeebrown px-4 py-3 outline-none transition-colors text-dark"
+                                    placeholder="Your Name" required>
+                            </div>
+
+                            <div>
+                                <label for="company"
+                                    class="block text-xs uppercase tracking-widest text-walnut font-bold mb-2">Company
+                                    Name</label>
+                                <input type="text" id="company" name="entry.1556369182"
+                                    class="w-full bg-light border border-coffeebrown/30 focus:border-coffeebrown px-4 py-3 outline-none transition-colors text-dark"
+                                    placeholder="Company Name">
+                            </div>
+
+                            <div>
+                                <label for="email"
+                                    class="block text-xs uppercase tracking-widest text-walnut font-bold mb-2">Email</label>
+                                <input type="email" id="email" name="entry.479301265"
+                                    class="w-full bg-light border border-coffeebrown/30 focus:border-coffeebrown px-4 py-3 outline-none transition-colors text-dark"
+                                    placeholder="hello@company.com" required>
+                            </div>
+
+                            <div>
+                                <label for="inquiry-type"
+                                    class="block text-xs uppercase tracking-widest text-walnut font-bold mb-2">Type of
+                                    Inquiry</label>
+                                <select id="inquiry-type" name="entry.1753222212"
+                                    class="w-full bg-light border border-coffeebrown/30 focus:border-coffeebrown px-4 py-3 outline-none transition-colors text-dark appearance-none"
+                                    required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="Wholesale">Wholesale</option>
+                                    <option value="Interior Project">Interior Project</option>
+                                    <option value="Export">Export</option>
+                                </select>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-gold text-white font-bold uppercase tracking-[0.2em] py-4 hover:bg-coffeebrown transition-colors mt-4">
+                                Submit
+                            </button>
+                        </form>
+
+                        <!-- Hidden iframe for silent Google Form submission -->
+                        <!-- Removed: Now using fetch() API for submission -->
+
+                        <!-- Success Message Container -->
+                        <div id="form-success-message"
+                            class="hidden mt-6 bg-sand border border-coffeebrown/30 p-4 text-center transition-all duration-300">
+                            <h4 class="text-gold font-bold tracking-wide mb-1">Thank you!</h4>
+                            <p class="text-coffeebrown/80 text-sm">Your inquiry has been received. We will be in touch
+                                shortly.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"
+        class="bg-coffeebrown text-[#E8E1D7] pt-24 pb-10 border-t border-white/10 relative overflow-hidden">
+
+        <!-- Subtle Background Texture -->
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1596489357062-811cff713501?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-5 z-0">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <!-- Column 1: Brand Info -->
+                <div class="reveal">
+                    <a href="#" class="font-serif text-3xl tracking-wide font-semibold text-[#E8E1D7] block mb-6">
+                        Regency Handicraft<span class="text-gold">.</span>
+                    </a>
+                    <p class="text-[#E8E1D7]/80 font-light text-sm leading-relaxed mb-6">
+                        Bringing Home Harmony to your space through bespoke Moradabad craftsmanship and global
+                        aesthetics.
+                    </p>
+                </div>
+
+                <!-- Column 2: Collections -->
+                <div class="reveal reveal-delay-1">
+                    <h4 class="text-lg font-serif mb-6 text-[#E8E1D7] tracking-wide">Collections</h4>
+                    <ul class="space-y-4 text-sm font-light text-[#E8E1D7]/80 tracking-wide">
+                        <li><a href="#collection-grid" class="hover:text-gold transition-colors">The Kodo Collection</a>
+                        </li>
+                        <li><a href="#collection-grid" class="hover:text-gold transition-colors">The Katha Series</a>
+                        </li>
+                        <li><a href="#collection-grid" class="hover:text-gold transition-colors">Aura-Struct</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: B2B -->
+                <div class="reveal reveal-delay-2">
+                    <h4 class="text-lg font-serif mb-6 text-[#E8E1D7] tracking-wide">B2B Partners</h4>
+                    <ul class="space-y-4 text-sm font-light text-[#E8E1D7]/80 tracking-wide">
+                        <li><a href="#" class="hover:text-gold transition-colors">Export Inquiries</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Wholesale Catalog</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sustainability Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="reveal reveal-delay-3">
+                    <h4 class="text-lg font-serif mb-6 text-[#E8E1D7] tracking-wide">Head Office</h4>
+                    <address class="not-italic text-sm font-light text-[#E8E1D7]/80 space-y-4 tracking-wide">
+                        <p class="flex items-start">
+                            <svg class="w-5 h-5 text-[#B89947] mr-3 -mt-1 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="placeholder.png">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Plot No:13, Royal Rajat Farms, Jhanwar Road, Boranada, Jodhpur (342005) Rajasthan, <br>India
+                        </p>
+                        <p class="flex items-start">
+                            <!-- Email Icon (Envelope) -->
+                            <svg class="w-5 h-5 text-gold mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <a href="mailto:regencyhandicraft@gmail.com"
+                                class="hover:text-gold transition-colors">regencyhandicraft@gmail.com</a>
+                        </p>
+                        <p class="flex items-center">
+                            <!-- Phone Icon -->
+                            <svg class="w-5 h-5 text-gold mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <a href="tel:+919772776405" class="hover:text-gold transition-colors">+91-9772776405</a>
+                        </p>
+                    </address>
+                </div>
+            </div>
+
+            <!-- Trust Bar / EPCH -->
+            <div class="border-t border-white/10 pt-8 pb-4 mb-8 text-center reveal">
+                <p class="text-sm font-light text-sand/80 tracking-wide max-w-4xl mx-auto">
+                    Regency is a government recognized export house and a member of the Export Promotion Council for
+                    Handicrafts (<span class="text-gold font-medium">EPCH</span>) which is India’s premier export
+                    promotion organization.
+                </p>
+            </div>
+
+            <!-- Copyright / Bottom Bar -->
+            <div
+                class="border-t border-[#E8E1D7]/20 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-[#E8E1D7]/60 font-light tracking-wide reveal">
+                <p>&copy; 2026 Regency Handicraft. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-6">
+                    <a href="#" class="hover:text-[#B89947] transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-[#B89947] transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Collection Specs Modal -->
+    <div id="specs-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-300">
+        <!-- Backdrop -->
+        <div id="specs-modal-backdrop" class="absolute inset-0 bg-dark/70 backdrop-blur-sm cursor-pointer"></div>
+
+        <!-- Modal Content (2-Column Responsive with Slider) -->
+        <div class="relative w-full max-w-5xl mx-4 shadow-2xl transform scale-95 opacity-0 transition-all duration-300 flex flex-col max-h-[90vh] md:max-h-[85vh] rounded-md overflow-hidden bg-light"
+            id="specs-modal-content">
+
+            <!-- Close Button Overlay on Top Right -->
+            <button id="close-modal-btn"
+                class="absolute top-4 right-4 z-20 bg-light/80 backdrop-blur-md rounded-full p-2 text-walnut hover:text-dark hover:bg-white transition-all focus:outline-none shadow-sm group">
+                <svg class="w-5 h-5 transition-transform group-hover:rotate-90" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Navigation Arrows -->
+            <button id="modal-prev-btn"
+                class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-light/90 backdrop-blur-md rounded-full p-3 text-walnut hover:text-coffeebrown hover:bg-white transition-all focus:outline-none shadow-md hover:scale-110">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button id="modal-next-btn"
+                class="absolute right-4 md:right-[50%] md:mr-4 top-1/2 -translate-y-1/2 z-20 bg-light/90 backdrop-blur-md rounded-full p-3 text-walnut hover:text-coffeebrown hover:bg-white transition-all focus:outline-none shadow-md hover:scale-110">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <!-- Slide Counter -->
+            <div id="modal-counter"
+                class="absolute top-4 left-4 z-20 bg-light/80 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-coffeebrown shadow-sm border border-coffeebrown/10">
+                1 / 4
+            </div>
+
+            <div class="flex flex-col md:flex-row h-full overflow-y-auto md:overflow-hidden relative bg-sand">
+                <!-- Left Column (Image) -->
+                <div class="md:w-1/2 relative min-h-[300px] md:min-h-full shrink-0 overflow-hidden bg-white">
+                    <img id="modal-image" src="" alt="Collection Feature"
+                        class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 transform">
+                </div>
+
+                <!-- Right Column (Content) -->
+                <div class="md:w-1/2 p-8 md:p-12 overflow-y-auto w-full relative bg-light">
+                    <div id="modal-text-content" class="transition-opacity duration-300">
+                        <span id="modal-coll"
+                            class="text-coffeebrown/70 text-xs tracking-[0.2em] uppercase font-semibold mb-3 block">Collection
+                            Name</span>
+                        <h2 id="modal-title" class="text-3xl md:text-4xl font-serif text-coffeebrown font-bold mb-6">
+                            Product Title</h2>
+
+                        <p id="modal-desc" class="text-coffeebrown/80 font-medium mb-8 leading-relaxed max-w-md">
+                            Collection description or product subtitle.
+                        </p>
+
+                        <div class="border-t border-walnut/20 pt-6 mt-auto">
+                            <h4 class="text-xs tracking-widest uppercase font-bold text-coffeebrown mb-4 opacity-80">
+                                Material Specifications</h4>
+                            <ul id="modal-specs-list" class="space-y-3 text-coffeebrown font-medium list-none">
+                                <!-- Javascript will append items here -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
