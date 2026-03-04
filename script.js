@@ -372,13 +372,17 @@ document.addEventListener('DOMContentLoaded', () => {
             // Create FormData from the form
             const formData = new FormData(inquiryForm);
 
-            // Send a hidden POST request to Google Forms
+            // Send a hidden POST request to Google Apps Script
+            const submitBtn = inquiryForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.textContent = "Sending...";
+            submitBtn.disabled = true;
+
             fetch(inquiryForm.action, {
                 method: 'POST',
-                body: formData,
-                mode: 'no-cors' // Crucial to prevent CORS errors since Google doesn't return CORS headers for form submissions
-            }).then(() => {
-                // Since it's no-cors, we won't get a true success status, but if it resolves, we assume success
+                body: formData
+            }).then(response => {
+                // If it resolves, assume success (Apps Script CORS redirects might mask the JSON output but the request succeeds)
                 inquiryForm.reset();
 
                 // Keep the form fields clean, and display the thank you message
@@ -391,6 +395,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }).catch(error => {
                 console.error('Error submitting form:', error);
                 alert("There was a problem submitting your inquiry. Please try again.");
+            }).finally(() => {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
             });
         });
     }
